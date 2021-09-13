@@ -1,9 +1,10 @@
 let song;
 let fft;
 let particles = [];
-let bob;
-let billy;
-let ele;
+let kygo = document.getElementById("kygo");
+let sarah = document.getElementById("sarah");
+let giveon = document.getElementById("giveon");
+let olivia = document.getElementById("olivia");
 const file = document.getElementById("file-input");
 
 function preload() {
@@ -20,10 +21,26 @@ function setup() {
   angleMode(DEGREES);
   imageMode(CENTER);
   fft = new p5.FFT(0.8, 1024);
-  img.filter(BLUR, 2);
   file.onchange = function () {
     const files = this.files; // FileList containing File objects selected by the user (DOM File API)
     song = loadSound(files[0]);
+  };
+
+  sarah.onclick = function() {
+    song.stop()
+    song = loadSound("./assets/audio/sarah.mp4");
+  };
+  kygo.onclick = function() {
+    song.stop()
+    song = loadSound("./assets/audio/kygo.mp3");
+  };
+  olivia.onclick = function() {
+    song.stop()
+    song = loadSound("./assets/audio/good4u.mp4");
+  };
+  giveon.onclick = function() {
+    song.stop()
+    song = loadSound("./assets/audio/giveon.mp3");
   };
 
   noLoop();

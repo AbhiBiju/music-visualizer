@@ -19,13 +19,18 @@
       body {
         background-color: black;
         color:white;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       div{
-        transform: translateY(250%);
+        position: absolute;
         text-align: center;
         font-family: Exo;
         font-size: 1.5rem;
         font-weight: bolder;
+        transform: translateY(140%);
       }
       label {
         color: black;
@@ -39,13 +44,27 @@
       label:hover{
         opacity: 1;
       }
+      span > * {
+        margin: 0.2rem;
+        padding: 0.5rem;
+        background-color: hsl(208, 93%, 84%, 0.7);
+        border: none;
+        border-radius: 15px;
+        font-family: Exo;
+        font-weight: bolder;
+        transition: 0.4s;
+      }
+      span > *:hover {
+        transform: scale(1.15);
+        background-color: hsl(208, 93%, 84%, 1);
+      }
       input{
         display: none;
       }
       </style>
   </head>
   <body>
-    <div><p>pick a song</p>><label>Click<input type="file" id="file-input" accept="audio/*,video/*,image/*" /></label><</div>
+    <div><span><button id='giveon'>Giveon</button><button id='sarah'>Sarah</button><button id='kygo'>Kygo</button><button id='olivia'>Olivia</button></span><p>pick a song</p>><label>Upload<input type="file" id="file-input" accept="audio/*,video/*,image/*" /></label><</div>
     <script src="p5jsTest.js"></script>
   </body>
 </html>
