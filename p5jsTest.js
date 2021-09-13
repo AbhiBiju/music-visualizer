@@ -121,6 +121,17 @@ function mouseClicked() {
   }
 }
 
+function keyTyped() {
+  if(key === ' '){
+    if (song.isPlaying()) {
+      song.pause();
+      noLoop();
+    } else {
+      song.play();
+      loop();
+    }
+  }
+}
 class Particle {
   constructor() {
     this.pos = p5.Vector.random2D().mult(50); // average of last two nums in r variable
