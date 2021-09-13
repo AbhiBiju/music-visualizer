@@ -121,6 +121,16 @@ function mouseClicked() {
   }
 }
 
+function touchStarted() {
+  if (song.isPlaying()) {
+    song.pause();
+    noLoop();
+  } else {
+    song.play();
+    loop();
+  }
+}
+
 function keyTyped() {
   if(key === ' '){
     if (song.isPlaying()) {
