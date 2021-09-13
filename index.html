@@ -1,17 +1,51 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src=https://cdn.JsDelivr.net/npm/p5></script>
+    <script defer src=https://cdn.JsDelivr.net/npm/p5/lib/addons/p5.dom.min.js></script>
+    <script defer src=https://cdn.JsDelivr.net/npm/p5/lib/addons/p5.sound.min.js></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100&display=swap" rel="stylesheet">
     <title>Music Visualizer</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: black;
+        color:white;
+      }
+      div{
+        transform: translateY(250%);
+        text-align: center;
+        font-family: Exo;
+        font-size: 1.5rem;
+        font-weight: bolder;
+      }
+      label {
+        color: black;
+        transition: 0.4s;
+        opacity: 0;
+        padding: 0.2rem;
+        background-color: hsl(208, 93%, 84%, 0.7);
+        border-radius: 15px;
+        border: solid grey 1px;
+      }
+      label:hover{
+        opacity: 1;
+      }
+      input{
+        display: none;
+      }
+      </style>
   </head>
   <body>
-    <input type="file" id="file-input" accept="audio/*,video/*,image/*" />
-    <canvas id="canvas"></canvas>
-    <h3 id="name"></h3>
-    <audio id="audio" controls></audio>
-    <div id="background"></div>
+    <div><p>pick a song</p>><label>Click<input type="file" id="file-input" accept="audio/*,video/*,image/*" /></label><</div>
+    <script src="p5jsTest.js"></script>
   </body>
 </html>
